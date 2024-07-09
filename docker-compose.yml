@@ -1,0 +1,28 @@
+services:
+
+  php8:
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - 8080:80
+    volumes:
+      - ./www:/var/www/html
+      - ./customini:/usr/local/etc/php
+
+  db:
+    image: mariadb
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=devdb
+      - MYSQL_ROOT_PASSWORD=example
+      
+  phpmyadmin:
+    image: phpmyadmin
+    environment:
+      - PMA_HOST=db
+      - PMA_PORT=3306
+    ports:
+      - 8081:80
+  
