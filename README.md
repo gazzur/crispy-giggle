@@ -10,7 +10,7 @@ This one is designed to be used with VScode, and comes pre-installed with a coup
 
 ### Xdebug✨
 
-It is set up to use [xdebug](https://xdebug.org/), which is disabled by default for performance reasons. To enable it, change the 'xdebug.mode' setting in the included php.ini file from 'off' to 'debug,develop'.
+It is set up to use [xdebug](https://xdebug.org/), which is disabled by default for performance reasons. To enable it, change the 'xdebug.mode' setting in the included php.ini file from 'off' to 'debug,develop' (the xdebug settings are at the bottom of the php.ini file, don't forget to restart apache once changed!).
 
 The container also comes with
 - Git
