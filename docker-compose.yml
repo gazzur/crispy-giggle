@@ -8,7 +8,7 @@ services:
       - 8080:80
     volumes:
       - ./www:/var/www/html
-      - ./customini:/usr/local/etc/php
+      - ./customini/:/usr/local/etc/php/conf.d
 
   db:
     image: mariadb
